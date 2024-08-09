@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --collor000: #FAF8F4;
+    --collor001: #ff9011;
+    --collor002: #B85E2C;
+    --collor003: #B4B5B4;
+    --collor004: #08100c;
+}
+
+hr {
+    border-color: var(--collor001);
+    width: 20rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--collor000);
+    color: var(--collor004);
+
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: var(--collor000);
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+
+header img {
+    width: 50px;
+    margin-left: 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: -3.3rem;
+    font-size: 1.1em;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--collor004);
+    padding: 2px 20px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--collor001);
+    transition: 0s;
+}
+
+nav a.actived {
+    background-color: var(--collor001);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.137);
+}
+
+/* HOME */
+
+section#home {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10rem;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* APRESENTAÇÃO (ESQUERDA) */
+
+section#home > article#rios {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    row-gap: 4em;
+    flex-direction: column;
+}
+
+article#rios > h1 {
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    font-size: 120px;
+    width: 360px;
+    line-height: 100px;
+}
+
+#rios > p {
+    width: 400px;
+    text-align: justify;
+    color: var(--collor000);
+}
+
+#rios a {
+    background-color: var(--collor001);
+    border-radius: 25px;
+    padding: 10px 50px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--collor004);
+}
+
+#rios a > p::after {
+    content: "";
+    background-image: url("imagens/main/instagram_6422200.png");
+    background-size: cover;
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    margin-left: 20px;
+}
+
+/* IMAGEM */
+
+section#home > aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside#pastores-img img {
+    width: 400px;
+    border: 6px solid var(--collor004);
+}
+
+div#barra {
+    background-color: var(--collor001);
+    width: 400px;
+    height: 20px;
+    border: 6px solid var(--collor004);
+    border-bottom: 0px;
+}
+
+#fecha-barra {
+    text-align: center;
+    background-color: var(--collor000);
+    font-weight: 900;
+    border-left: 6px solid var(--collor004);
+    width: 25px;
+    height: 20px;
+    margin-left: auto;
+}
+
+/**/
+
+#back {
+    background-color: var(--collor004);
+    height: 280px;
+    margin-top: -340px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+/* SOBRE */
+
+section#infos {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--collor004);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--collor000);
+    row-gap: 1em;
+}
+
+#sobre-img {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    gap: 1rem;
+}
+
+#sobre-img div {
+    flex: 1;
+    border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: 1s;
+}
+
+#sobre-img div:hover {
+    flex: 5;
+}
+
+#infos article {
+    text-align: center;
+    width: 1000px;
+    height: 1.5em;
+}
+
+/* PROGRAMAÇÃO */
+
+section#prog {
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: var(--collor000);
+    color: var(--collor004);
+}
+
+#prog #aviso{
+    text-align: center;
+}
+
+#prog > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    padding-top: 2em;
+}
+
+#prog a {
+    text-decoration: none;
+    color: var(--collor004);
+    padding: 2px 45px;
+    background-color: var(--collor003);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#prog a.clicked {
+    background-color: var(--collor004);
+    color: var(--collor000);
+    border-radius: 5px;
+}
+
+#prog article.cronograma-article {
+    background-color: var(--collor003);
+    color: var(--collor004);
+    margin: auto;
+    max-width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 6px solid var(--collor004);
+}
+
+#prog div#barra {
+    background-color: var(--collor001);
+    width: 700px;
+    margin: auto;
+    height: 20px;
+    border: 6px solid var(--collor004);
+    border-bottom: 0px;
+    margin-top: 2em;
+}
+
+#prog article.hidden {
+    display: none;
+}
